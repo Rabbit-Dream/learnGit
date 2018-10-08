@@ -29,4 +29,5 @@ Git跟踪修改 每次修改，如果不用 git add 到暂存区，那就不会�
 远程管理：
 	one: 创建 SSH Key  $ ssh-keygen -t rsa -C "youremail"  一路回车，使用默认值即可。由于这个Key也不用于军事目的，所以也无需设置密码。如果顺利边可以在用户主目录下的.ssh目录找到 id_rsa和id_rsa.pub两个文件，这两个就是 SSH Key 的秘钥，id_rsa是私钥，不可以泄露，id_rsa.pub是公钥，可以告诉别人。
 	two:登录GitHub，打开“Account settings”,"SSH Key"页面，然后“Add SSH Key”,填上Title,在Key文本框里粘贴 id_rsa.pub 文件内容，最后点“Add Key”
-	
+	three:登录GitHub，然后，在右上角找到“new repository”,创建一个新的仓库，填入Repository name,点击“Create repository”按钮，就成功地床架了一个新的 Git 仓库
+	four:要关联一个远程库，使用命令 git remote add origin git@server-name:path/repo-name.git ; 关联后，使用命令 git push -u origin master 第一次推送 master 分支的所有内容；此后，每次本地提交后，只要有必要，就可以使用命令 git push origin master 推送最新修改	
