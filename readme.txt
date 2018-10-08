@@ -22,7 +22,11 @@ Git跟踪修改 每次修改，如果不用 git add 到暂存区，那就不会�
 场景3：已经提交了不合适的修改到版本库时，想要撤销本次提交，那就版本退回吧，不过前提是没有推送到远程库
 
 如果你删除了文件：
-	1.确实要冲版本库中删除该文件，那就用命令 git rm/add filename 删掉,并且 git commit -m "说明"
+	1.确实要冲版本库中$删除该文件，那就用命令 git rm/add filename 删掉,并且 git commit -m "说明"
 	2.误删，因为版本库里还有呢，所以可以很轻松地把误删的文件回复到最新版本(git checkout -- filename) 其实是用版本库里的版本替换工作区的版本，无论工作区是修改还是删除，都可以一键还原
 	注意: 你只能恢复文件到最新版本，你会丢失最近一次提交后你修改的内容
 
+远程管理：
+	one: 创建 SSH Key  $ ssh-keygen -t rsa -C "youremail"  一路回车，使用默认值即可。由于这个Key也不用于军事目的，所以也无需设置密码。如果顺利边可以在用户主目录下的.ssh目录找到 id_rsa和id_rsa.pub两个文件，这两个就是 SSH Key 的秘钥，id_rsa是私钥，不可以泄露，id_rsa.pub是公钥，可以告诉别人。
+	two:登录GitHub，打开“Account settings”,"SSH Key"页面，然后“Add SSH Key”,填上Title,在Key文本框里粘贴 id_rsa.pub 文件内容，最后点“Add Key”
+	
