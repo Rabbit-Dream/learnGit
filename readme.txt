@@ -9,3 +9,8 @@ Git is free software.
 要随时掌握工作区的状态，使用 git status 命令查看
 如果 git status 告诉我们文件被修改过，我们可以用 git diff 进一步查看修改内容
 
+HEAD 指向的版本就是当前版本，因此，Git允许我们载版本的历史之间穿梭，使用命令 git reset --hard commit_id
+穿梭前，用 git log 可以查看提交历史，以便确定要回到哪个版本
+要重返未来，用 git reflog 查看命令历史，确定要回到未来的那个版本
+
+
